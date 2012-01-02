@@ -8,7 +8,7 @@
 
 	<taskdef name="jscomp"
 		classname="com.google.javascript.jscomp.ant.CompileTask"
-		classpath="/usr/share/closure/compiler.jar"/>
+		classpath="${CLOSURE}"/>
 	
 	<target name="init">
 		<!-- Create the time stamp -->
@@ -55,12 +55,12 @@
 	<filelist dir="js" id="libfiles">
 		<file name="audiolib/lib/audiolib.min.js"/>
 		
-		<file name="js/controllers/keyboard.js"/>
-		<file name="js/generation/arpeggiator.js"/>
-		<file name="js/generation/note.js"/>
+		<file name="controllers/keyboard.js"/>
+		<file name="generation/arpeggiator.js"/>
+		<file name="generation/note.js"/>
 
-		<file name="js/musictheory/chord.js"/>
-		<file name="js/musictheory/note.js"/>
+		<file name="musictheory/chord.js"/>
+		<file name="musictheory/note.js"/>
 	</filelist>
 	
 </project>
