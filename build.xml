@@ -1,0 +1,66 @@
+<project name="Asset ANT Build" default="init" basedir=".">
+	<description>
+		Build
+	</description>
+
+	<!-- global properties -->
+	<property name="build.dir" location="build"/>
+
+	<taskdef name="jscomp"
+		classname="com.google.javascript.jscomp.ant.CompileTask"
+		classpath="${CLOSURE}/lib/compiler.jar"/>
+	
+	<target name="init">
+		<!-- Create the time stamp -->
+		<tstamp/>
+		<!-- Create Temp Build Dir -->
+		<mkdir dir="${build.dir}" />
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+	</target>
+	
+	<target
+		name="compile"
+		description="Google Closure">
+		<jscomp
+			compilationLevel="whitespace"
+			warning="verbose" 
+	        debug="true"
+			output="${build.dir}/js/synth.js">
+			<sources refid="libfiles"/>
+		</jscomp>
+	</target>
+	
+	<target
+		name="compilewithjquery"
+		description="Google Closure">
+		<jscomp
+			compilationLevel="whitespace"
+			warning="verbose" 
+	        debug="true"
+			output="${build.dir}/js/videolib_jquery.js">
+			<sources dir="js">
+				<file name="jquery/jquery-1.6.1.min.js"/>
+			</sources>
+			<sources refid="libfiles"/>
+		</jscomp>
+	</target>
+	
+	<target
+		name="package">
+	</target>
+	
+	<filelist dir="js" id="libfiles">
+		<file name="audiolib/lib/audiolib.min.js"/>
+		
+		<file name="js/controllers/keyboard.js"/>
+		<file name="js/generation/arpeggiator.js"/>
+		<file name="js/generation/note.js"/>
+
+		<file name="js/musictheory/chord.js"/>
+		<file name="js/musictheory/note.js"/>
+	</filelist>
+	
+</project>
