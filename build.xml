@@ -8,7 +8,7 @@
 
 	<taskdef name="jscomp"
 		classname="com.google.javascript.jscomp.ant.CompileTask"
-		classpath="${CLOSURE}/lib/compiler.jar"/>
+		classpath="${CLOSURE}"/>
 	
 	<target name="init">
 		<!-- Create the time stamp -->
