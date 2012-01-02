@@ -483,8 +483,8 @@ function Chord(notation, octave) {
         var notes = this.notesFromChordType(chordType, root, octave);
 
         // modify note set if needed
-        var modifier = notation;
-        switch ( modifier.substr(0,3) ) {
+        var mdifier = notation;
+        switch ( mdifier.substr(0,3) ) {
             case ChordConstants.AUGMENTED:
                 notes = augment(notes);
                 break;
@@ -494,7 +494,7 @@ function Chord(notation, octave) {
                 break;
 
             case ChordConstants.SUSTAIN:
-                var param = int(modifier.charAt(3));
+                var param = int(mdifier.charAt(3));
                 notes = sustain(notes, param);
                 break;
         }
