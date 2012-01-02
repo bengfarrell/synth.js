@@ -58,8 +58,6 @@
 	</filelist>
 	
 	<filelist dir="js" id="libfiles">
-		<file name="audiolib/lib/audiolib.min.js"/>
-		
 		<file name="controllers/keyboard.js"/>
 		<file name="generation/arpeggiator.js"/>
 		<file name="generation/note.js"/>
