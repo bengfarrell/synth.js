@@ -44,6 +44,7 @@
 			<sources dir="js">
 				<file name="jquery/jquery-1.6.1.min.js"/>
 			</sources>
+            <sources refid="dependencies"/>
 			<sources refid="libfiles"/>
 		</jscomp>
 	</target>
@@ -51,6 +52,10 @@
 	<target
 		name="package">
 	</target>
+
+    <filelist id="dependencies">
+		<file name="audiolib/lib/audiolib.min.js"/>
+	</filelist>
 	
 	<filelist dir="js" id="libfiles">
 		<file name="audiolib/lib/audiolib.min.js"/>
