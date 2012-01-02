@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="audiolib/lib/audiolib.js"></script>
+    <script type="text/javascript" src="js/generation/note.js"></script>
+    <script type="text/javascript" src="js/generation/arpeggiator.js"></script>
+    <script type="text/javascript" src="js/musictheory/note.js"></script>
+    <script type="text/javascript" src="js/musictheory/chord.js"></script>
+    <script type="text/javascript" src="js/controllers/keyboard.js"></script>
+    <!--<script type="text/javascript" src="NoteTest.js"></script>-->
+    <script type="text/javascript" src="ArpeggiatorTest.js"></script>
+</head>
+<body>
+
+Use the alphabetic keys to play a note.
+This works in Chrome only.
+
+<br />
+<br />
+Waveform Shape:
+<select id="waveform">
+  <option value="pulse">pulse</option>
+  <option value="sine">sine</option>
+  <option value="triangle">triangle</option>
+  <option value="square">square</option>
+  <option value="sawtooth">sawtooth</option>
+  <option value="invSawtooth">invSawtooth</option>
+</select>
+
+<br />
+<input type="checkbox" name="Use Envelope" value="off" id="envelope" onchange="toggleEnvelope()" />Use an Envelope:&nbsp;
+<span id="envelopeLabel">0</span>
+
+<br />
+
+<div id="adsr">
+    Attack: <input type="range" name="attack" id="attackTime" min="50" max="500" value="250" onchange="onEnvelopeChange()">
+    <br />
+    Decay: <input type="range" name="decay" id="decayTime" min="50" max="500" value="250" onchange="onEnvelopeChange()">
+    <br />
+    Sustain Time: <input type="range" name="sustainTime" id="sustainTime" min="0" max="500" value="250" onchange="onEnvelopeChange()">
+    <br />
+    Release Time: <input type="range" name="releaseTime" id="releaseTime" min="50" max="500" value="250" onchange="onEnvelopeChange()">
+</div>
+
+<script>
+    onReady();
+</script>
+</body>
+</html>
