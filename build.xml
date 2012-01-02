@@ -29,22 +29,7 @@
 			warning="verbose" 
 	        debug="true"
 			output="${build.dir}/js/synth.js">
-			<sources refid="libfiles"/>
-		</jscomp>
-	</target>
-	
-	<target
-		name="compilewithjquery"
-		description="Google Closure">
-		<jscomp
-			compilationLevel="whitespace"
-			warning="verbose" 
-	        debug="true"
-			output="${build.dir}/js/videolib_jquery.js">
-			<sources dir="js">
-				<file name="jquery/jquery-1.6.1.min.js"/>
-			</sources>
-            <sources refid="dependencies"/>
+	        <sources refid="dependencies"/>
 			<sources refid="libfiles"/>
 		</jscomp>
 	</target>
@@ -53,8 +38,8 @@
 		name="package">
 	</target>
 
-    <filelist id="dependencies">
-		<file name="audiolib/lib/audiolib.min.js"/>
+    <filelist dir="audiolib" id="dependencies">
+		<file name="lib/audiolib.min.js"/>
 	</filelist>
 	
 	<filelist dir="js" id="libfiles">
