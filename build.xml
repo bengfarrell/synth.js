@@ -38,8 +38,8 @@
 		name="package">
 	</target>
 
-    <filelist dir="audiolib" id="dependencies">
-		<file name="lib/audiolib.min.js"/>
+    <filelist dir="libs" id="dependencies">
+		<file name="audiolib.min.js"/>
 	</filelist>
 	
 	<filelist dir="js" id="libfiles">
