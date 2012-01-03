@@ -229,8 +229,8 @@ function Chord(notation, octave) {
     /**
      * get notes in major triad
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} major triad root note
+     * @param {number} major triad root octave
      * @return {Array.<string>} notes
      */
     this.majorTriad = function(root, rootOctave) {
@@ -240,9 +240,9 @@ function Chord(notation, octave) {
     /**
      * get notes in minor triad
      *
-     * @param {string} root note
-     * @param {number} root octave
-     * @return {Array.<string> notes
+     * @param {string} minor triad root note
+     * @param {number} minor triad root octave
+     * @return {Array.<string>} notes
      */
     this.minorTriad = function(root, rootOctave) {
         return this.getStandardNotesInChordMakeup(root, false, false, rootOctave).slice(0,3);
@@ -251,8 +251,8 @@ function Chord(notation, octave) {
     /**
      * get notes in seventh chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} seventh chord root note
+     * @param {number} seventh chord root octave
      * @return {Array.<string>} notes
      */
     this.seventh = function(root, rootOctave) {
@@ -262,8 +262,8 @@ function Chord(notation, octave) {
     /**
      * get notes in major seventh chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} major seventh chord root note
+     * @param {number} major seventh chord root octave
      * @return {Array.<string>} notes
      */
     this.majorSeventh = function(root, rootOctave) {
@@ -273,8 +273,8 @@ function Chord(notation, octave) {
     /**
      * get notes in minor seventh chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} minor seventh chord root note
+     * @param {number} minor seventh chord root octave
      * @return {Array.<string>} notes
      */
     this.minorSeventh = function(root, rootOctave) {
@@ -284,8 +284,8 @@ function Chord(notation, octave) {
     /**
      * get notes in ninth chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} ninth chord root note
+     * @param {number} ninth chord root octave
      * @return {Array.<string>} notes
      */
     this.ninth = function(root, rootOctave) {
@@ -295,8 +295,8 @@ function Chord(notation, octave) {
     /**
      * get notes in major ninth chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} major ninth chord root note
+     * @param {number} major ninth chord root octave
      * @return {Array.<string>} notes
      */
     this.majorNinth = function(root, rootOctave) {
@@ -306,8 +306,8 @@ function Chord(notation, octave) {
     /**
      * get notes in minor ninth chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} minor ninth chord root note
+     * @param {number} minor ninth chord root octave
      * @return {Array.<string>} notes
      */
     this.minorNinth = function(root, rootOctave) {
@@ -317,8 +317,8 @@ function Chord(notation, octave) {
     /**
      * get notes in eleventh chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} eleventh chord root note
+     * @param {number} eleventh chord root octave
      * @return {Array.<string>} notes
      */
     this.eleventh = function(root, rootOctave) {
@@ -328,8 +328,8 @@ function Chord(notation, octave) {
     /**
      * get notes in major eleventh chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} major eleventh chord root note
+     * @param {number} major eleventh chord root octave
      * @return {Array.<string>} notes
      */
     this.majorEleventh = function(root, rootOctave) {
@@ -339,8 +339,8 @@ function Chord(notation, octave) {
     /**
      * get notes in minor eleventh chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} minor eleventh chord root note
+     * @param {number} minor eleventh chord root octave
      * @return {Array.<string>} notes
      */
     this.minorEleventh = function(root, rootOctave) {
@@ -350,8 +350,8 @@ function Chord(notation, octave) {
     /**
      * get notes in thirteenth chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} thirteenth chord root note
+     * @param {number} thirteenth chord root octave
      * @return {Array.<string>} notes
      */
     this.thirteenth = function(root, rootOctave) {
@@ -361,8 +361,8 @@ function Chord(notation, octave) {
     /**
      * get notes in major thirteenth chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} major thirteenth chord root note
+     * @param {number} major thirteenth chord root octave
      * @return {Array.<string>} notes
      */
     this.majorThirteenth = function(root, rootOctave) {
@@ -372,8 +372,8 @@ function Chord(notation, octave) {
     /**
      * get notes in minor thirteenth chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} minor thirteenth chord root note
+     * @param {number} minor thirteenth chord root octave
      * @return {Array.<string>} notes
      */
     this.minorThirteenth= function(root, rootOctave) {
@@ -384,8 +384,8 @@ function Chord(notation, octave) {
     /**
      * get notes in sixth chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} sixth chord root note
+     * @param {number} sixth chord root octave
      * @return {Array.<string>} notes
      */
     this.sixth = function(root, rootOctave) {
@@ -398,8 +398,8 @@ function Chord(notation, octave) {
     /**
      * get notes in minor sixth chord
      *
-     * @param {string} root note
-     * @param {number} root octave
+     * @param {string} minor sixth chord root note
+     * @param {number} minor sixth chord root octave
      * @return {Array.<string>} notes
      */
     this.minorSixth = function(root, rootOctave) {
@@ -412,7 +412,7 @@ function Chord(notation, octave) {
     /**
      * sustain chord
      *
-     * @param {string} root note
+     * @param {string} sustain root note
      * @param {string} direction to sustain
      * @return {Array.<string>} notes
      */
