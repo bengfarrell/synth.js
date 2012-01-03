@@ -9,6 +9,10 @@
 	<taskdef name="jscomp"
 		classname="com.google.javascript.jscomp.ant.CompileTask"
 		classpath="/usr/share/closure/compiler.jar"/>
+
+    <taskdef name="jsdoctoolkit"
+             classname="uk.co.darrenhurley.ant.tasks.JsDocToolkit"
+             classpath="/usr/share/jsdoc/jsdoc-toolkit-ant-task-1.1.2.jar"/>
 	
 	<target name="init">
 		<!-- Create the time stamp -->
@@ -37,6 +41,16 @@
 	<target
 		name="package">
 	</target>
+
+    <target
+            name="document"
+            description="JSDoc">
+        <jsdoctoolkit
+                jsdochome="/usr/share/jsdoc/jsdoc-toolkit-ant-task-1.1.2.jar"
+                template="sunny"
+                outputdir="/output/dir/"
+                inputdir="${build.dir}" />
+    </target>
 
     <filelist dir="libs" id="dependencies">
 		<file name="audiolib.min.js"/>
