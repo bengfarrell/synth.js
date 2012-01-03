@@ -1,8 +1,13 @@
+/**
+ * Handles button presses and releases, keeps track of press/release phases to
+ * properly mix keys
+ * @constructor
+ */
 function KeyboardController() {
 
     var that = this;
 
-    /** buffer object */
+    /** @type {buffer object} */
     that.buffer = null;
 
     /** keys pressed list */
