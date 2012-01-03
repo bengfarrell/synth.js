@@ -1,20 +1,36 @@
 Note = {
-    /* incremental tones as sharp notation */
+    /**
+     * incremental tones as sharp notation
+     * @const
+     * @type {Array.<string>}
+     **/
     sharpNotations: ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"],
 
-    /* incremental tones as flat notation */
+    /**
+     * incremental tones as flat notation
+     * @const
+     * @type {Array.<string>}
+     **/
     flatNotations: ["A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab"],
 
-    /* odd notations */
+    /**
+     * odd notations
+     * @const
+     * @type {Array.<string>}
+     **/
     oddNotations: ["B#", "Cb", "E#", "Fb"],
 
-    /* corrected notations */
+    /**
+     * corrected notations
+     * @const
+     * @type {Array.<string>}
+     **/
     correctedNotations: ["C", "C", "F", "F"],
 
     /**
      * turn a notation into a frequency
-     * @param notation
-     * @return frequency
+     * @param {string} notation
+     * @return {string} frequency
      */
     getFrequencyForNotation: function(nt) {
         var octave = 4;
@@ -47,10 +63,10 @@ Note = {
     /**
      * get notes in a specific key signature
      *
-     * @param key (root note)
-     * @param if major key signature
-     * @param octave to use (optional)
-     * @return keys in key signature
+     * @param {string} key (root note)
+     * @param {boolean} if major key signature
+     * @param {number} octave to use (optional)
+     * @return {Array.<string>} keys in key signature
      */
     notesInKeySignature: function(key, major, octave) {
         var notesToIndex;
