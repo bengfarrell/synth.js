@@ -1,3 +1,7 @@
+/**
+ * Chord Notation Enumerators
+ * @enum
+ */
 ChordConstants = {
     /**
      * major triad
@@ -105,6 +109,10 @@ ChordConstants = {
      DIMINISHED: "dim"
 };
 
+/**
+ * Chord Factory - Build an array of notations or actual notes (audiolib oscillator)
+ * @constructor
+ */
 ChordFactory = {
     /**
      * create a list of notations from chord
