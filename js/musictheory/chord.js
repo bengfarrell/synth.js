@@ -1,7 +1,6 @@
 /**
  * Chord Notation Enumerators
  * @enum {string}
- * @constructor
  */
 ChordConstants = {
     /**
