@@ -12,7 +12,7 @@
 
     <taskdef name="jsdoctoolkit"
              classname="uk.co.darrenhurley.ant.tasks.JsDocToolkit"
-             classpath="/usr/share/jsdoc/jsdoc-toolkit-ant-task-1.1.2.jar"/>
+             classpath="/usr/share/jsdoc/jsdoc_toolkit-2.4.0/jsdoc-toolkit/jsrun.jar;/usr/share/jsdoc/jsdoc-toolkit-ant-task-1.1.2.jar;"/>
 	
 	<target name="init">
 		<!-- Create the time stamp -->
@@ -46,10 +46,10 @@
             name="document"
             description="JSDoc">
         <jsdoctoolkit
-                jsdochome="/usr/share/jsdoc/jsdoc-toolkit-ant-task-1.1.2.jar"
-                template="sunny"
-                outputdir="/output/dir/"
-                inputdir="${build.dir}" />
+                jsdochome="/usr/share/jsdoc/jsdoc_toolkit-2.4.0/jsdoc-toolkit/"
+                template="jsdoc"
+                outputdir="${build.dir}/docs"
+                inputdir="js" />
     </target>
 
     <filelist dir="libs" id="dependencies">
