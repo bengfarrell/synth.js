@@ -1,11 +1,12 @@
 /**
  * Chord Notation Enumerators
- * @enum {string}
+ * @constructor
  */
 ChordConstants = {
     /**
      * major triad
      * @const
+     * @static
      * @type {string}
      **/
      MAJOR_TRIAD: "maj",
@@ -13,6 +14,7 @@ ChordConstants = {
      /**
      * minor triad
      * @const
+     * @static
      * @type {string}
      **/
      MINOR_TRIAD: "m",
@@ -20,6 +22,7 @@ ChordConstants = {
      /**
      * seventh
      * @const
+     * @static
      * @type {string}
      **/
      SEVENTH: "7",
@@ -27,6 +30,7 @@ ChordConstants = {
     /**
      * minor seventh
      * @const
+     * @static
      * @type {string}
      **/
      MINOR_SEVENTH: "m7",
@@ -34,6 +38,7 @@ ChordConstants = {
     /**
      * major seventh
      * @const
+     * @static
      * @type {string}
      **/
      MAJOR_SEVENTH: "maj7",
@@ -41,6 +46,7 @@ ChordConstants = {
     /**
      * ninth
      * @const
+     * @static
      * @type {string}
      **/
      NINTH: "9",
@@ -48,6 +54,7 @@ ChordConstants = {
     /**
      * minor ninth
      * @const
+     * @static
      * @type {string}
      **/
      MINOR_NINTH: "m9",
@@ -55,6 +62,7 @@ ChordConstants = {
     /**
      * major ninth
      * @const
+     * @static
      * @type {string}
      **/
      MAJOR_NINTH: "maj9",
@@ -62,6 +70,7 @@ ChordConstants = {
     /**
      * eleventh
      * @const
+     * @static
      * @type {string}
      **/
      ELEVENTH: "11",
@@ -69,6 +78,7 @@ ChordConstants = {
     /**
      * thirteenth
      * @const
+     * @static
      * @type {string}
      **/
      THIRTEENTH: "13",
@@ -76,6 +86,7 @@ ChordConstants = {
     /**
      * sixth
      * @const
+     * @static
      * @type {string}
      **/
      SIXTH: "6",
@@ -83,6 +94,7 @@ ChordConstants = {
     /**
      * minor sixth
      * @const
+     * @static
      * @type {string}
      **/
      MINOR_SIXTH: "m6",
@@ -90,6 +102,7 @@ ChordConstants = {
     /**
      * sustain
      * @const
+     * @static
      * @type {string}
      **/
      SUSTAIN: "sus",
@@ -97,6 +110,7 @@ ChordConstants = {
     /**
      * augmented
      * @const
+     * @static
      * @type {string}
      **/
      AUGMENTED: "aug",
@@ -104,6 +118,7 @@ ChordConstants = {
     /**
      * diminished
      * @const
+     * @static
      * @type {string}
      **/
      DIMINISHED: "dim"
@@ -116,6 +131,7 @@ ChordConstants = {
 ChordFactory = {
     /**
      * create a list of notations from chord
+     * @static
      * @param {string} chord notation
      * @param {Array.<string>} notation array (individual notes)
      */
@@ -126,6 +142,7 @@ ChordFactory = {
 
     /**
      * create an array of note oscillators using the audiolib framework
+     * @static
      * @param {number} sampleRate
      * @param {string} notation
      */

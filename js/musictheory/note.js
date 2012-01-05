@@ -1,7 +1,12 @@
+/**
+ * Note static class
+ * @constructor
+ */
 Note = {
     /**
      * incremental tones as sharp notation
      * @const
+     * @static
      * @type {Array.<string>}
      **/
     sharpNotations: ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"],
@@ -9,6 +14,7 @@ Note = {
     /**
      * incremental tones as flat notation
      * @const
+     * @static
      * @type {Array.<string>}
      **/
     flatNotations: ["A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab"],
@@ -16,6 +22,7 @@ Note = {
     /**
      * odd notations
      * @const
+     * @static
      * @type {Array.<string>}
      **/
     oddNotations: ["B#", "Cb", "E#", "Fb"],
@@ -23,12 +30,14 @@ Note = {
     /**
      * corrected notations
      * @const
+     * @static
      * @type {Array.<string>}
      **/
     correctedNotations: ["C", "C", "F", "F"],
 
     /**
      * turn a notation into a frequency
+     * @static
      * @param {string} notation
      * @return {string} frequency
      */
@@ -63,6 +72,7 @@ Note = {
     /**
      * get notes in a specific key signature
      *
+     * @static
      * @param {string} key (root note)
      * @param {boolean} if major key signature
      * @param {number} octave to use (optional)
