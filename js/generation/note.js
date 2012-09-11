@@ -15,6 +15,15 @@ audioLib.generators('Note', function (sampleRate, notation, octave){
     that.frequency = Note.getFrequencyForNotation(notation);
 }, {
     /**
+     * reset key phase so we can use the key again
+     */
+    resetKeyPhase: function() {
+        this.releasePhase = false;
+        this.released = false;
+    },
+
+
+    /**
      * release key - trigger the release phase if not done
      */
     releaseKey: function() {
@@ -58,6 +67,15 @@ audioLib.generators('Note', function (sampleRate, notation, octave){
         } else {
         	return this[this.waveShape]() * buffer[0];
         }
+    },
+
+    /**
+     * set notation
+     *
+     * @param notation
+     */
+    setNotation: function(value) {
+        this.frequency = Note.getFrequencyForNotation(value);
     },
 
     /**

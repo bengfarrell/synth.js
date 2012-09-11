@@ -28,6 +28,9 @@ function KeyboardController() {
      * @param id to assign to generator
      */
     that.pressKey = function (generator, id) {
+        if (generator.resetKeyPhase) {
+            generator.resetKeyPhase();
+        }
         this._keysPressed.push(generator);
         this._keyIDsPressed.push(id);
     }
@@ -49,9 +52,11 @@ function KeyboardController() {
      */
     that.releaseKeyByRef = function (generator) {
         var indx = this._keysPressed.indexOf(generator);
-        this._keysPressed[indx].releaseKey();
-        this._keysPressed.splice(indx, 1);
-        this._keyIDsPressed.splice(indx, 1);
+        if (indx != -1) {
+            this._keysPressed[indx].releaseKey();
+            this._keysPressed.splice(indx, 1);
+            this._keyIDsPressed.splice(indx, 1);
+        }
     }
 
     /**
@@ -87,6 +92,18 @@ function KeyboardController() {
     that.releaseKeysByIDs = function (ids) {
         for ( var id in ids ) {
             this.releaseKeyByID(ids[id]);
+        }
+    }
+
+    /**
+     * check if key ID is pressed
+     * @param id
+     */
+    that.isKeyPressed = function(id) {
+        if (this._keyIDsPressed.indexOf(id) == -1 && this._keyIDsReleased.indexOf(id) == -1) {
+            return false;
+        } else {
+            return true;
         }
     }
 
